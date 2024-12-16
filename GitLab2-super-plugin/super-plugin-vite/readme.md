@@ -170,10 +170,3 @@ Pour des questions ou des suggestions, n'hésitez pas à ouvrir une issue !
 ---
 
 🎉 **Happy Debugging avec Vite et ChatGPT !**
-
----
-
-### Instructions pour le Déploiement
-
-- Ajoutez le fichier `.env` à votre `.gitignore` pour éviter de versionner votre clé API.
-- Vous pouvez personnaliser le délai entre les appels API et le modèle utilisé (`gpt-3.5-turbo`, `gpt-4`, etc.).
