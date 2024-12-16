@@ -1,0 +1,20 @@
+{
+  "name": "super-plugin-vite",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.0.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "fs": "0.0.1-security",
+    "openai": "^4.76.3",
+    "path": "^0.12.7"
+  }
+}

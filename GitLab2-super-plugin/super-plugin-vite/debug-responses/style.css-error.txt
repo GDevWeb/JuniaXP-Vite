@@ -1,0 +1,35 @@
+L'erreur "Unexpected token ':'" indique que le navigateur n'attend pas un token ":" à cet endroit du code. 
+
+Dans le code fourni, le problème se situe au niveau de la propriété "color-scheme: light dark;". Cette propriété n'est pas supportée par tous les navigateurs. Pour résoudre cette erreur, vous pouvez la remplacer par les propriétés "color-scheme" individuelles pour chaque mode clair et sombre, comme ceci :
+
+```
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+  }
+  a:hover {
+    color: #535bf2;
+  }
+  button {
+    background-color: #1a1a1a;
+  }
+}
+```
+
+En remplaçant la propriété "color-scheme" par les propriétés individuelles pour chaque mode, vous devriez résoudre l'erreur JavaScript.

@@ -1,0 +1,15 @@
+L'erreur "Unexpected token 'export'" indique que vous essayez d'utiliser l'instruction export en dehors d'un module JavaScript. Si vous utilisez ce code dans un fichier JavaScript simple (et non dans un module), vous devriereur de retirer l'instruction export et simplement définir la fonction setupCounter comme une fonction normale, sans l'exporter.
+
+Voici le code modifié sans l'instruction export :
+
+function setupCounter(element) {
+  let counter = 0
+  const setCounter = (count) => {
+    counter = count
+    element.innerHTML = `count is ${counter}`
+  }
+  element.addEventListener('click', () => setCounter(counter + 1))
+  setCounter(0)
+} 
+
+Avec cette modification, vous devriez résoudre l'erreur Unexpected token 'export' et la fonction setupCounter devrait fonctionner correctement.

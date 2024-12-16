@@ -1,0 +1,21 @@
+L'erreur "Cannot use import statement outside a module" se produit générajson lorsque vous essayez d'utiliser une déclaration "import" en dehors d'un module JavaScript. Pour résoudre cette erreur, vous devez vous assurer que votre fichier JavaScript est correctement défini comme un module.
+
+Voici quelques étapes que vous pouvez suivre pour résoudre cette erreur :
+
+1. Assurez-vous que votre fichier JavaScript a l'extension de fichier ".mjs" ou que vous avez ajouté l'attribut "type="module"" à la balise de script dans votre fichier HTML.
+
+Exemple :
+```html
+<script type="module" src="votre_script.js"></script>
+```
+
+2. Assurez-vous que vous utilisez la bonne syntaxe d'importation pour importer des modules.
+
+Exemple :
+```javascript
+import '@vite/env';
+```
+
+3. Assurez-vous que vous exécutez votre code dans un environnement qui prend en charge les modules JavaScript, comme un navigateur moderne ou Node.js avec le support des modules activé.
+
+En suivant ces étapes, vous devriez être en mesure de résoudre l'erreur "Cannot use import statement outside a module" dans votre code JavaScript.

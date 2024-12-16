@@ -1,0 +1,45 @@
+Pour résoudre cette erreur, vous devez transformer votre script JavaScript en un module. Pour ce faire, vous pouvez ajouter l'attribut "type="module"" à votre balise de script dans votre fichier HTML, comme ceci :
+
+```html
+<script type="module" src="votre_script.js"></script>
+```
+
+Ensuite, vous pouvez modifier votre fichier JavaScript en exportant les fonctions ou les variables que vous utilisez, par exemple :
+
+```javascript
+// counter.js
+export function setupCounter(element) {
+  // code de la fonction
+}
+```
+
+Et dans votre fichier principal, vous pouvez importer ces fonctions de la manière suivante :
+
+```javascript
+import './style.css'
+import javascriptLogo from './javascript.svg'
+import viteLogo from './vite.svg'
+import { setupCounter } from './counter.js'
+
+document.querySelector('#app').innerHTML = `
+  <div>
+    <a href="https://vite.dev" target="_blank">
+      <img src="${viteLogo}" class="logo" alt="Vite logo" />
+    </a>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
+      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
+    </a>
+    <h1>Hello Vite!</h1>
+    <div class="card">
+      <button id="counter" type="button"></button>
+    </div>
+    <p class="read-the-docs">
+      Click on the Vite logo to learn more
+    </p>
+  </div>
+`
+
+setupCounter(document.querySelector('#counter'))
+```
+
+Ensuite, assurez-vous que votre fichier HTML contient bien l'attribut "type="module"" pour votre script JavaScript et que tous les chemins d'importation dans votre script sont corrects. Cela devrait résoudre l'erreur "Cannot use import statement outside a module".
